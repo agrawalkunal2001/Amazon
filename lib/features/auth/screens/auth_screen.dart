@@ -89,6 +89,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     child: Column(
                       children: [
                         CustomTextField(
+                          type: TextInputType.name,
                           controller: _nameController,
                           hintText: "Name",
                         ),
@@ -96,6 +97,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           height: 10,
                         ),
                         CustomTextField(
+                          type: TextInputType.emailAddress,
                           controller: _emailController,
                           hintText: "Email",
                         ),
@@ -103,6 +105,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           height: 10,
                         ),
                         CustomTextField(
+                          type: TextInputType.text,
                           controller: _passwordController,
                           hintText: "Password",
                         ),
@@ -113,7 +116,7 @@ class _AuthScreenState extends State<AuthScreen> {
                             text: "Sign-Up",
                             onTap: () {
                               if (_signupFormKey.currentState!.validate()) {
-                                signUpUser;
+                                signUpUser();
                               }
                             }),
                       ],
@@ -148,6 +151,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     child: Column(
                       children: [
                         CustomTextField(
+                          type: TextInputType.emailAddress,
                           controller: _emailController,
                           hintText: "Email",
                         ),
@@ -155,6 +159,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           height: 10,
                         ),
                         CustomTextField(
+                          type: TextInputType.text,
                           controller: _passwordController,
                           hintText: "Password",
                         ),

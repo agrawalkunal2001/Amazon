@@ -7,11 +7,10 @@ import 'package:http/http.dart' as http;
 void httpErrorHandle({
   required http.Response response,
   required BuildContext context,
-  required VoidCallback onSuccess,
 }) {
   switch (response.statusCode) {
     case 200:
-      onSuccess();
+      showSnackbar(context, "Account created! Login with same credentials!");
       break;
     case 400:
       showSnackbar(context, jsonDecode(response.body)["msg"]);

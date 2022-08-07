@@ -28,12 +28,9 @@ class AuthService {
           });
 
       httpErrorHandle(
-          response: res,
-          context: context,
-          onSuccess: () {
-            showSnackbar(
-                context, "Account created! Login with same credentials!");
-          });
+        response: res,
+        context: context,
+      );
     } catch (e) {
       showSnackbar(context, e.toString());
     }
